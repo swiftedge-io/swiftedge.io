@@ -1,67 +1,73 @@
+@import 'variables/main';
+
 body {
+  background: $azul-color;
   height: 200vh;
-  background: #272d38;
 }
 
 * {
-  border: none;
-  padding: 0;
-  margin: 0;
+  border: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
 }
 
 nav {
-  position: absolute;
-  border-bottom: 1px solid rgba(255, 176, 31, 0);
-  z-index: 2;
-  top: 0;
-  left: 0;
+  border-bottom: 1px solid $border-bottom-color;
   display: block;
-  width: 100%;
+  left: 0;
+  position: absolute;
   top: 0;
   transition-duration: .5s;
+  width: 100%;
+  z-index: 2;
 
   &.fixed {
+    background: $background-fixed-color;
+    border-bottom: 1px solid $border-fixed-color;
+    box-shadow: 0 4px 11px $box-shadow-color;
     position: fixed;
-    background: rgba(255, 176, 31, 0.05);
-    border-bottom: 1px solid rgba(255, 176, 31, 0.27);
-    box-shadow: 0px 4px 11px rgba(10, 10, 10, 0.28);
   }
 
   .logo {
-    display: inline-block;
     background-image: url('logo.png');
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    padding: 25px;
-    margin: 12px 10px;
-    vertical-align: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
     float: left;
+    margin: 12px 10px;
+    padding: 25px;
+    vertical-align: top;
   }
 
   ul {
-    vertical-align: top;
     display: inline-block;
     float: right;
     padding-top: 10px;
+    vertical-align: top;
 
     li {
       display: inline-block;
 
       a {
-        padding: 20px 15px;
-        text-decoration: none;
-        color: white;
-        font-family: sans-serif;
-        font-weight: lighter;
+        color: $white;
         display: block;
-        text-transform: uppercase;
+        font-family: sans-serif;
         font-size: 12px;
+        font-weight: lighter;
+        padding: $default-margin * 2 $default-padding;
+        text-decoration: none;
+        text-transform: uppercase;
         transition-duration: .3s;
 
         &:hover {
-          color: #ffb01f;
+          color: $orange-light-color;
         }
       }
     }
@@ -103,7 +109,7 @@ header {
 
     span {
       z-index: 2;
-      color: #ffb01f;
+      color: $orange-light-color;
       font-size: 65px;
       font-weight: bolder;
     }
@@ -124,19 +130,19 @@ header {
 
     &:hover {
       box-shadow: 0px 4px 11px rgba(10, 10, 10, 0.38);
-      color: #ffb01f;
+      color: $orange-light-color;
       background: rgba(255, 176, 31, 0.04);
     }
   }
 }
 
 .contact {
-  background-color: #ffb01f;
+  background-color: $orange-light-color;
   color: #33363d;
   font-family: sans-serif;
   font-size: 11px;
-  text-transform: uppercase;
   text-align: right;
+  text-transform: uppercase;
 
   &-frase {
     font-weight: bold;
@@ -174,17 +180,17 @@ header {
 
 section {
   position: relative;
-  background: #272d38;
+  background: $azul-color;
   color: #fdfdfd;
   font-family: 'Lato';
   text-align: center;
   padding: 80px;
 
   h2 {
-    color: #ffb01f;
+    color: $orange-light-color;
     display: inline-block;
     padding: 10px 20px;
-    border: 3px solid white;
+    border: 3px solid $white;
     margin-bottom: 70px;
     text-transform: uppercase;
   }
@@ -202,12 +208,12 @@ section {
     text-align: left;
 
     h3 {
-      color: #ffb01f;
+      color: $orange-light-color;
       text-align: left;
       padding-bottom: 10px;
       margin: 20px 50px;
       text-transform: uppercase;
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid $white;
       display: inline-block;
     }
 
@@ -223,7 +229,7 @@ section {
 
 
 .services {
-  background: #333a48;
+  background: $dark-blue-color;
   overflow: hidden;
 
   .container {
@@ -233,7 +239,7 @@ section {
       width: 30%;
       padding: 15px 40px 35px;
       margin-bottom: 10px;
-      background: #272d38;
+      background: $azul-color;
       display: inline-block;
       margin: 0 10px;
       min-height: 240px;
@@ -242,26 +248,26 @@ section {
       border-bottom: 3px solid #fdfdfd;
 
       &:hover {
+        box-shadow: 3px 4px 15px rgba(0, 0, 0, .37);
+        border-bottom: 3px solid $orange-light-color;
         transform: scale(1.03);
-        box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.37);
-        border-bottom: 3px solid #ffb01f;
       }
 
       h3 {
-        color: #ffb01f;
-        padding-bottom: 10px;
-        margin: 20px 50px;
-        text-transform: uppercase;
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid $white;
+        color: $orange-light-color;
         display: inline-block;
+        padding-bottom: 10px;
+        margin: 25px 50px;
+        text-transform: uppercase;
         font-size: 14px;
       }
 
       p {
-        padding: 0;
         font-size: 14px;
-        line-height: 23px;
         font-weight: lighter;
+        line-height: 23px;
+        padding: 0;
       }
     }
   }
@@ -272,24 +278,24 @@ section {
   padding: 20px;
 
   .item {
-    margin: 0px 25px;
-    background: #272d38;
+    background: $azul-color;
     border-radius: 60px;
-    padding: 5px;
     display: inline-block;
+    margin: 0 25px;
+    padding: 5px;
     transition-duration: .3s;
 
     &:hover {
+      background: $dark-blue-color;
+      box-shadow: 1px 2px 10px $transparent-color;
       transform: scale(1.04);
-      box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.44);
-      background: #333a48;
     }
 
     img {
-      padding: 15px;
-      width: 100px;
       height: 100px;
+      padding: $default-padding;
       transition-duration: .3s;
+      width: 100px;
     }
   }
 }

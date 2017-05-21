@@ -1,54 +1,55 @@
 body {
-  height: 200vh;
-  background: #272d38; }
+  background: #272d38;
+  height: 200vh; }
 
 * {
-  border: none;
-  padding: 0;
+  border: 0;
+  box-sizing: border-box;
   margin: 0;
-  box-sizing: border-box; }
+  padding: 0; }
+  *::after, *::before {
+    box-sizing: border-box; }
 
 nav {
-  position: absolute;
   border-bottom: 1px solid rgba(255, 176, 31, 0);
-  z-index: 2;
-  top: 0;
-  left: 0;
   display: block;
-  width: 100%;
+  left: 0;
+  position: absolute;
   top: 0;
-  transition-duration: .5s; }
+  transition-duration: .5s;
+  width: 100%;
+  z-index: 2; }
   nav.fixed {
-    position: fixed;
     background: rgba(255, 176, 31, 0.05);
     border-bottom: 1px solid rgba(255, 176, 31, 0.27);
-    box-shadow: 0px 4px 11px rgba(10, 10, 10, 0.28); }
+    box-shadow: 0 4px 11px rgba(10, 10, 10, 0.28);
+    position: fixed; }
   nav .logo {
-    display: inline-block;
     background-image: url("logo.png");
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    padding: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    float: left;
     margin: 12px 10px;
-    vertical-align: top;
-    float: left; }
+    padding: 25px;
+    vertical-align: top; }
   nav ul {
-    vertical-align: top;
     display: inline-block;
     float: right;
-    padding-top: 10px; }
+    padding-top: 10px;
+    vertical-align: top; }
     nav ul li {
       display: inline-block; }
       nav ul li a {
+        color: #000;
+        display: block;
+        font-family: sans-serif;
+        font-size: 12px;
+        font-weight: lighter;
         padding: 20px 15px;
         text-decoration: none;
-        color: white;
-        font-family: sans-serif;
-        font-weight: lighter;
-        display: block;
         text-transform: uppercase;
-        font-size: 12px;
         transition-duration: .3s; }
         nav ul li a:hover {
           color: #ffb01f; }
@@ -109,8 +110,8 @@ header {
   color: #33363d;
   font-family: sans-serif;
   font-size: 11px;
-  text-transform: uppercase;
-  text-align: right; }
+  text-align: right;
+  text-transform: uppercase; }
   .contact-frase {
     font-weight: bold;
     float: left;
@@ -145,7 +146,7 @@ section {
     color: #ffb01f;
     display: inline-block;
     padding: 10px 20px;
-    border: 3px solid white;
+    border: 3px solid #000;
     margin-bottom: 70px;
     text-transform: uppercase; }
   section p {
@@ -163,7 +164,7 @@ section {
       padding-bottom: 10px;
       margin: 20px 50px;
       text-transform: uppercase;
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid #000;
       display: inline-block; }
     section .half-section p {
       padding: 0;
@@ -189,38 +190,38 @@ section {
       transition-duration: .3s;
       border-bottom: 3px solid #fdfdfd; }
       .services .container .card:hover {
-        transform: scale(1.03);
         box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.37);
-        border-bottom: 3px solid #ffb01f; }
+        border-bottom: 3px solid #ffb01f;
+        transform: scale(1.03); }
       .services .container .card h3 {
+        border-bottom: 2px solid #000;
         color: #ffb01f;
-        padding-bottom: 10px;
-        margin: 20px 50px;
-        text-transform: uppercase;
-        border-bottom: 2px solid white;
         display: inline-block;
+        padding-bottom: 10px;
+        margin: 25px 50px;
+        text-transform: uppercase;
         font-size: 14px; }
       .services .container .card p {
-        padding: 0;
         font-size: 14px;
+        font-weight: lighter;
         line-height: 23px;
-        font-weight: lighter; }
+        padding: 0; }
 
 .tecs {
   padding: 20px; }
   .tecs .item {
-    margin: 0px 25px;
     background: #272d38;
     border-radius: 60px;
-    padding: 5px;
     display: inline-block;
+    margin: 0 25px;
+    padding: 5px;
     transition-duration: .3s; }
     .tecs .item:hover {
-      transform: scale(1.04);
+      background: #333a48;
       box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.44);
-      background: #333a48; }
+      transform: scale(1.04); }
     .tecs .item img {
-      padding: 15px;
-      width: 100px;
       height: 100px;
-      transition-duration: .3s; }
+      padding: 15px;
+      transition-duration: .3s;
+      width: 100px; }

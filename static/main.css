@@ -141,7 +141,7 @@ section {
   padding: 80px;
   position: relative;
   text-align: center; }
-  section .about p {
+  section.about p {
     font-size: 18px; }
   section h2 {
     border: 3px solid #fff;
@@ -177,36 +177,43 @@ section {
 .services {
   background: #333a48;
   overflow: hidden; }
-  .services .container {
-    margin: 0 auto; }
-    .services .container .card {
-      background: #272d38;
-      border-bottom: 3px solid #fdfdfd;
+
+.container {
+  margin: 0 auto; }
+  .container.text-left p {
+    text-align: left; }
+  .container .card {
+    background: #272d38;
+    border-bottom: 3px solid #fdfdfd;
+    display: inline-block;
+    margin: 0 10px;
+    margin-bottom: 10px;
+    min-height: 240px;
+    padding: 15px 40px 35px;
+    transition-duration: .3s;
+    vertical-align: top;
+    width: 30%; }
+    .container .card:hover {
+      border-bottom: 3px solid #ffb01f;
+      box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.44);
+      transform: scale(1.03); }
+    .container .card h3 {
+      border-bottom: 2px solid #fff;
+      color: #ffb01f;
       display: inline-block;
-      margin: 0 10px;
-      margin-bottom: 10px;
-      min-height: 240px;
-      padding: 15px 40px 35px;
-      transition-duration: .3s;
-      vertical-align: top;
-      width: 30%; }
-      .services .container .card:hover {
-        border-bottom: 3px solid #ffb01f;
-        box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.44);
-        transform: scale(1.03); }
-      .services .container .card h3 {
-        border-bottom: 2px solid #fff;
-        color: #ffb01f;
-        display: inline-block;
-        font-size: 14px;
-        margin: 25px 50px;
-        padding-bottom: 10px;
-        text-transform: uppercase; }
-      .services .container .card p {
-        font-size: 14px;
-        font-weight: lighter;
-        line-height: 23px;
-        padding: 0; }
+      font-size: 14px;
+      margin: 25px 50px;
+      padding-bottom: 10px;
+      text-transform: uppercase; }
+    .container .card p {
+      font-size: 14px;
+      font-weight: lighter;
+      line-height: 23px;
+      padding: 0; }
+  .container .middle {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%; }
 
 .tecs {
   padding: 20px; }
@@ -226,3 +233,10 @@ section {
       padding: 15px;
       transition-duration: .3s;
       width: 100px; }
+
+.text-left {
+  text-align: left; }
+
+.link {
+  color: #ffb01f;
+  font-weight: 400; }

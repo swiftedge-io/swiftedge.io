@@ -185,7 +185,7 @@ section {
   position: relative;
   text-align: center;
 
-  .about {
+  &.about {
     p {
       font-size: 18px;
     }
@@ -236,45 +236,57 @@ section {
 .services {
   background: $dark-blue-color;
   overflow: hidden;
+}
 
-  .container {
-    margin: 0 auto;
+.container {
+  margin: 0 auto;
 
-    .card {
-      background: $azul-color;
-      border-bottom: 3px solid $white-color-text;
-      display: inline-block;
-      margin: 0 10px;
-      margin-bottom: 10px;
-      min-height: 240px;
-      padding: 15px 40px 35px;
-      transition-duration: .3s;
-      vertical-align: top;
-      width: 30%;
-
-      &:hover {
-        border-bottom: 3px solid $orange-light-color;
-        box-shadow: 3px 4px 15px $transparent-color;
-        transform: scale(1.03);
-      }
-
-      h3 {
-        border-bottom: 2px solid $white;
-        color: $orange-light-color;
-        display: inline-block;
-        font-size: 14px;
-        margin: 25px 50px;
-        padding-bottom: 10px;
-        text-transform: uppercase;
-      }
-
-      p {
-        font-size: 14px;
-        font-weight: lighter;
-        line-height: 23px;
-        padding: 0;
-      }
+  &.text-left {
+    p {
+      text-align: left;
     }
+  }
+
+  .card {
+    background: $azul-color;
+    border-bottom: 3px solid $white-color-text;
+    display: inline-block;
+    margin: 0 10px;
+    margin-bottom: 10px;
+    min-height: 240px;
+    padding: 15px 40px 35px;
+    transition-duration: .3s;
+    vertical-align: top;
+    width: 30%;
+
+    &:hover {
+      border-bottom: 3px solid $orange-light-color;
+      box-shadow: 3px 4px 15px $transparent-color;
+      transform: scale(1.03);
+    }
+
+    h3 {
+      border-bottom: 2px solid $white;
+      color: $orange-light-color;
+      display: inline-block;
+      font-size: 14px;
+      margin: 25px 50px;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: lighter;
+      line-height: 23px;
+      padding: 0;
+    }
+  }
+
+  .middle {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
   }
 }
 
@@ -303,4 +315,13 @@ section {
       width: 100px;
     }
   }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.link {
+  color: $orange-light-color;
+  font-weight: 400;
 }

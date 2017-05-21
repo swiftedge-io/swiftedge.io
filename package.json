@@ -1,0 +1,15 @@
+{
+  "name": "fact",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass src/sass/main.scss -o static",
+    "css:watch": "npm run css && node-sass src/sass/main.scss -wo static"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.5.2"
+  }
+}

@@ -5,11 +5,39 @@
   "main": "index.js",
   "scripts": {
     "css": "node-sass src/sass/main.scss -o static",
-    "css:watch": "npm run css && node-sass src/sass/main.scss -wo static"
+    "css:watch": "npm run css && node-sass src/sass/main.scss -wo static",
+    "server": "node server",
+    "server:watch": "nodemon server",
+    "server:dev": "npm run server:watch & npm run css:watch",
+    "build:dist": "mkdir -p dist && cp index.html dist/ && cp -a static dist/ && tar -cvf dist.tar dist/",
+    "build:clear": "rm -rf dist",
+    "build": "npm run build:dist && npm run build:clear"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.5.2"
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.17.2",
+    "css-loader": "^0.28.4",
+    "express": "^4.15.3",
+    "ignore-loader": "^0.1.2",
+    "mongoose": "^4.11.3",
+    "morgan": "^1.8.2",
+    "node-sass": "^4.5.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2",
+    "resolve-url-loader": "^2.1.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.3.0",
+    "webpack-dev-middleware": "^1.11.0",
+    "webpack-hot-middleware": "^2.18.2"
   }
 }

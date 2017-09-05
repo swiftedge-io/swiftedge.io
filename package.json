@@ -9,7 +9,7 @@
     "server": "node server",
     "server:watch": "nodemon server",
     "server:dev": "npm run server:watch & npm run css:watch",
-    "build:dist": "npm run css && mkdir -p dist && cp index.html dist/ && cp -a static dist/ && tar -cvf dist.tar dist/",
+    "build:dist": "npm run css && mkdir -p dist && cp index.html dist/ && cp -a static dist/ && tar -czf dist.tar dist/",
     "build:clear": "rm -rf dist",
     "build": "npm run build:dist && npm run build:clear"
   },

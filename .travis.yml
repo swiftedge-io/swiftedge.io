@@ -14,8 +14,7 @@ before_script:
 - npm install
 after_success:
 - test $TRAVIS_BRANCH = "master" && npm run dist
-- scp -o StrictHostKeyChecking=no dist.tar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
-- ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST $DEPLOY_PATH/deploy.sh
+- ./deploy.sh
 - rm dist.tar
 env:
   global:

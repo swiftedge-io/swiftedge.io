@@ -1,10 +1,10 @@
-touch config.json
-echo << EOL
+rm config.json && touch config.json
+cat > config.json <<- EOL
 {
-  "gmailUser": "GMAIL_USER"
-  "gmailPass": "GMAIL_PASS"
+  "gmailUser": "$GMAIL_USER",
+  "gmailPass": "$GMAIL_PASS"
 }
-EOL >> config.json
+EOL
 rm -rf dist && mkdir -p dist
 cp {index.html,package.json,config.json} dist/
 cp -a server dist/

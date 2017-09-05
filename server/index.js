@@ -32,9 +32,9 @@ app.post('/send-email', function(req, res) {
     }, (error, info) => {
         if (error) {
           res.status(400);
-          res.send(error);
+          return res.send(error);
         } else {
-          res.json({
+          return res.json({
             message: 'OK'
           });
         }

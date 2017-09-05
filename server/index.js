@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const transporter = require('./transporter');
+const config = require('../config');
+const transporter = require('./transporter')(config.gmailUser, config.gmailPass);
 
 const app = express();
 

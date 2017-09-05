@@ -6,8 +6,8 @@
   "scripts": {
     "css": "node-sass src/sass/main.scss -o static",
     "css:watch": "npm run css && node-sass src/sass/main.scss -wo static",
-    "server": "node server",
-    "server:watch": "nodemon server",
+    "server": "node server/index",
+    "server:watch": "nodemon server/index",
     "server:dev": "npm run server:watch & npm run css:watch",
     "build": "npm run css",
     "dist": "npm run build && bash bundle.sh",
@@ -20,6 +20,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "morgan": "^1.8.2",
+    "nodemailer": "^4.1.0",
     "nodemon": "^1.12.0"
   },
   "devDependencies": {

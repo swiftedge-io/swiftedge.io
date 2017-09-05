@@ -11,6 +11,7 @@
     "server:dev": "npm run server:watch & npm run css:watch",
     "build": "npm run css",
     "dist": "npm run build && ./bundle.sh",
+    "deploy": "npm run dist && ./deploy.sh",
     "start": "npm run server"
   },
   "author": "",

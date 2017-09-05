@@ -13,8 +13,8 @@ before_script:
 after_success:
 - test $TRAVIS_BRANCH = "master" && npm run build
 - tar -czf dist.tar dist
-- scp dist.tar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
-- ssh $DEPLOY_USER@DEPLOY_HOST $DEPLOY_PATH/deploy.sh
+- scp dist.tar $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH -o StrictHostKeyChecking=no
+- ssh $DEPLOY_USER@DEPLOY_HOST $DEPLOY_PATH/deploy.sh -o StrictHostKeyChecking=no
 - rm dist.tar
 env:
   global:

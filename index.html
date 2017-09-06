@@ -216,11 +216,11 @@
 
       <div class="nav">
         <ul>
-          <li><a href="#">about</a></li>
-          <li><a href="#">services</a></li>
-          <li><a href="#">technologies</a></li>
-          <li><a href="#">contact</a></li>
-          <li><a href="#">careers</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#services">services</a></li>
+          <li><a href="#techs">technologies</a></li>
+          <li><a href="#work">our work</a></li>
+          <li><a href="#contact">hire us</a></li>
         </ul>
       </div>
     </footer>
@@ -260,7 +260,7 @@
         }
       });
 
-      $('nav').find('a').click(function(e) {
+      $('nav, .nav').find('a').click(function(e) {
         e.preventDefault();
         var $this = $(this);
         var $goTo = $($this.attr('href'));

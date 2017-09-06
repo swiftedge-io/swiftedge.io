@@ -24,6 +24,7 @@
       </div>
     </nav>
     <section class="header">
+      <div class="background"></div>
       <div class="overlay"></div>
       <div class="container">
         <h1>
@@ -231,6 +232,12 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script type="text/javascript">
+      var bgimage = new Image();
+      bgimage.src="/static/hb.png";
+      $(".background").hide();
+      $(bgimage).on('load', function(){
+          $(".background").css("background-image","url("+$(this).attr("src")+")").fadeIn(800);
+       });
       $('.work-slider').slick();
       var navbar = document.getElementById('navbar');
       var toTop = document.getElementById('to-top');

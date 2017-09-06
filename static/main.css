@@ -53,6 +53,9 @@ nav {
       transition-duration: .2s; }
       nav ul li a:hover {
         border: 2px solid white; }
+      nav ul li a.border {
+        border: 1px solid;
+        border-radius: 4px; }
 
 .header {
   height: 85vh;
@@ -192,7 +195,9 @@ nav {
     border: 2px solid #eee;
     margin: 0 20px;
     transition-duration: .3s;
-    padding-bottom: 30px; }
+    padding-bottom: 30px;
+    min-height: 350px;
+    vertical-align: top; }
     .services .box:hover, .services .box.active {
       border-color: #f73b80;
       box-shadow: 2px 3px 11px rgba(0, 0, 0, 0.1);

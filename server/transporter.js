@@ -1,5 +1,4 @@
 const nodemailer = require('nodemailer');
-const
 
 module.exports = function (user, pass) {
   return nodemailer.createTransport({

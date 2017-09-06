@@ -71,6 +71,11 @@ nav {
         &:hover {
           border: 2px solid white;
         }
+
+        &.border {
+          border: 1px solid;
+          border-radius: 4px;
+        }
       }
     }
   }
@@ -253,6 +258,8 @@ nav {
     margin: 0 20px;
     transition-duration: .3s;
     padding-bottom: 30px;
+    min-height: 350px;
+    vertical-align: top;
 
     &:hover,
     &.active {

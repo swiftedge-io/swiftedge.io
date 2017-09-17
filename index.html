@@ -61,7 +61,7 @@
     <section class="services" id="services">
       <h2>Services <span>.</span></h2>
 
-      <div class="box">
+      <div class="box from-left">
         <h3>
           <div class="gradient"></div>
           <span>Full-stack Development</span>
@@ -77,7 +77,7 @@
           frameworks there is no project we can't tackle!
         </p>
       </div>
-      <div class="box">
+      <div class="box from-bottom">
         <h3>
           <div class="gradient"></div>
           <span>MVP</span>
@@ -93,7 +93,7 @@
           and then, we'll help you with each step of the way towards success.
         </p>
       </div>
-      <div class="box">
+      <div class="box from-right">
         <h3>
           <div class="gradient"></div>
           <span>Team Augmentation</span>
@@ -231,106 +231,7 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-    <script type="text/javascript">
-      var bgimage = new Image();
-      bgimage.src="/static/hb.png";
-      $(".background").hide();
-      $(bgimage).on('load', function(){
-          $(".background").css("background-image","url("+$(this).attr("src")+")").fadeIn(800);
-       });
-      $('.work-slider').slick();
-      var navbar = document.getElementById('navbar');
-      var toTop = document.getElementById('to-top');
-      window.onscroll = function() {
-        if (document.body.scrollTop === 0) {
-          navbar.className = '';
-          toTop.className = 'back-top';
-        } else {
-          navbar.className = 'solid';
-          toTop.className = 'back-top show'
-        }
-      }
-
-      var boxes = [].slice.apply(document.getElementsByClassName('box'));
-      boxes.forEach(function(box) {
-      	box.onmouseover = function(e) {
-          boxes.forEach(function(b) {
-            b.className = 'box'
-          });
-        }
-      });
-
-      $('nav, .nav').find('a').click(function(e) {
-        e.preventDefault();
-        var $this = $(this);
-        var $goTo = $($this.attr('href'));
-
-        $("html, body").animate({
-          scrollTop: $goTo.offset().top - 100
-        }, 1000);
-      });
-
-      $('#to-top').click(function() {
-        $("html, body").animate({
-          scrollTop: 0
-        }, 1000);
-      });
-
-      var $form = $('form');
-      var requiredFields = [
-        $form.find('input[name="name"]'),
-        $form.find('input[name="email"]'),
-        $form.find('textarea')
-      ];
-
-      requiredFields.forEach(function($elem) {
-        $elem.on('input', function() {
-          if (!$elem.val()) {
-            $elem.parents('.input-group').first().addClass('error');
-          } else {
-            $elem.parents('.input-group').first().removeClass('error');
-          }
-        });
-      })
-
-      $form.on('submit', function(e) {
-        e.preventDefault();
-        var errors = 0;
-        requiredFields.forEach(function($elem) {
-          if (!$elem.val()) {
-            errors += 1;
-            $elem.parents('.input-group').first().addClass('error');
-          } else {
-            $elem.parents('.input-group').first().removeClass('error');
-          }
-        });
-
-        if (!errors) {
-          $form.find('button').find('i').css({'display': 'inline-block'});
-
-          setTimeout(function() {
-            $.ajax({
-              url: $form.attr('action'),
-              data: $form.serialize(),
-              method: 'POST',
-              success: function(res) {
-                $form.find('input, textarea').val('');
-                $form.find('button').find('i').hide();
-              },
-              error: function(res) {
-                Object.keys(res.responseJSON.errors).forEach(function(name) {
-                  $form
-                    .find(`[name=${name}]`)
-                    .parents('.input-group')
-                    .first()
-                    .addClass('error');
-                });
-                $form.find('button').find('i').hide();
-              }
-            });
-          }, 500);
-        }
-      });
-    </script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="/static/main.js" charset="utf-8"></script>
   </body>
 </html>
